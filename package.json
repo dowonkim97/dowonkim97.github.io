@@ -84,7 +84,7 @@
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "deploy": "gatsby build && gh-pages -d public -b main -r 'git@github.com:dowonkim97/dowonkim97.github.io.git'",
+    "deploy": "gatsby build && gh-pages -d public -b master -r 'git@github.com:dowonkim97/dowonkim97.github.io.git'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
