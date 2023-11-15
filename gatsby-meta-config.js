@@ -3,7 +3,7 @@ module.exports = {
   description: `Blog posted about ...`,
   author: `[dowonkim97]`,
   introduction: `✏️ [Problem Solving Note] 배운 내용을 문서화하는 공간입니다.`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  siteUrl: `https://dowonkim97.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: ``, // Your GitHub account
