@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
-
 import * as Elements from '../components/elements'
 import { Layout } from '../layout'
 import { Head } from '../components/head'
 import { PostTitle } from '../components/post-title'
 import { PostDate } from '../components/post-date'
 import { PostContainer } from '../components/post-container'
-import { SocialShare } from '../components/social-share'
+// import { SocialShare } from '../components/social-share'
 import { SponsorButton } from '../components/sponsor-button'
 import { Bio } from '../components/bio'
 import { PostNavigator } from '../components/post-navigator'
@@ -36,10 +35,11 @@ export default ({ data, pageContext, location }) => {
       <PostTitle title={postTitle} />
       <PostDate date={date} />
       <PostContainer html={post.html} />
-      <SocialShare title={postTitle} author={author} />
+      {/*    <SocialShare title={postTitle} author={author} />
       {!!sponsor.buyMeACoffeeId && (
         <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
       )}
+       */}
       <Elements.Hr />
       <Bio />
       <PostNavigator pageContext={pageContext} />
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD")
       }
     }
   }

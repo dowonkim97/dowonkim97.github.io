@@ -5,7 +5,7 @@ import { Bio } from '../components/bio'
 import { Category } from '../components/category'
 import { Contents } from '../components/contents'
 import { Head } from '../components/head'
-import { HOME_TITLE } from '../constants'
+// import { HOME_TITLE } from '../constants'
 import { useCategory } from '../hooks/useCategory'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { useRenderedCount } from '../hooks/useRenderedCount'
@@ -33,9 +33,18 @@ export default ({ data, location }) => {
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory(DEST)
 
-  useEffect( tabRef => {
-    setDEST(!bioRef.current ? 316 : bioRef.current.getBoundingClientRect().bottom + window.pageYOffset + 24 )
-  }, [bioRef.current])
+  useEffect(
+    tabRef => {
+      setDEST(
+        !bioRef.current
+          ? 316
+          : bioRef.current.getBoundingClientRect().bottom +
+              window.pageYOffset +
+              24
+      )
+    },
+    [bioRef.current]
+  )
 
   useIntersectionObserver()
   useScrollEvent(() => {
@@ -52,7 +61,7 @@ export default ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
+      <Head keywords={siteMetadata.keywords} />
       <Bio ref={bioRef} />
       <Category
         categories={categories}
@@ -90,7 +99,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY.MM.DD")
             title
             category
             draft

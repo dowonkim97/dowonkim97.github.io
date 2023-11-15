@@ -7,7 +7,7 @@ import { THEME } from '../../constants'
 
 import './index.scss'
 
-const MoonIcon = () => {
+/* const MoonIcon = () => {
   return (
     <svg width="24" height="24">
       <rect width="24" height="24" fill="none" rx="0" ry="0" />
@@ -31,7 +31,7 @@ const SunIcon = () => {
       />
     </svg>
   )
-}
+} */
 function getTheme(checked) {
   return checked ? THEME.DARK : THEME.LIGHT
 }
@@ -77,16 +77,8 @@ export const ThemeSwitch = () => {
           id="normal-switch"
           height={24}
           width={48}
-          checkedIcon={
-            <div className="icon checkedIcon">
-              <MoonIcon />
-            </div>
-          }
-          uncheckedIcon={
-            <div className="icon uncheckedIcon">
-              <SunIcon />
-            </div>
-          }
+          checkedIcon={<div className="icon checkedIcon">D</div>}
+          uncheckedIcon={<div className="icon uncheckedIcon">L</div>}
           offColor={'#d9dfe2'}
           offHandleColor={'#fff'}
           onColor={'#999'}
