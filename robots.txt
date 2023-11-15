@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://dowonkim97.netlify.app/sitemap.xml
-Host: https://dowonkim97.netlify.app
+Sitemap: https://dowonkim97.github.io/sitemap.xml
+Host: https://dowonkim97.github.io
